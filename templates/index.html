@@ -1,0 +1,46 @@
+<html>
+  <head><title>Fruit Nutrition ChatBot</title></head>
+  <style>
+    .layer
+    {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .sublayer1
+    {
+      position: absolute;
+      top: 450px;
+      left: 800px;
+    }
+    .sublayer2
+    {
+      position: absolute;
+      top: 450px;
+      left: 1200px;
+    }
+  </style>
+<body>
+  <title></title>
+  <meta charset="utf-8" />
+  <div id="example1"></div>
+  <div style="position: relative; left: 0; top: 0;">
+    <img src="{{url_for('static', filename='backgr.png')}}" class="layer" width="100%">
+    <img src="{{url_for('static', filename='minion_fruit2r.png')}}" class="sublayer1" width="15%">
+    <img src="{{url_for('static', filename='minion_fruit3r.png')}}" class="sublayer2" width="15%">
+  </div>
+</body>
+ <script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "5921802d-6eca-463f-b65e-881fc0a10369", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "efb7264a-b8c8-4ce3-a457-295ffd3db08d", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+    document.head.appendChild(t);
+  });
+</script>
+<html>
